@@ -11,9 +11,8 @@ Describe any challenges encountered while building the app.
 
 ## Open-source libraries used
 
-- [Linux]
-- [Netbeans]
-- [MYSQL]
+- [Android Studio]
+- [Node.js]
 
 ## License
 
