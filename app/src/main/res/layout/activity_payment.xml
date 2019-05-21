@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:card_view="http://schemas.android.com/tools"
+android:orientation="vertical"
+tools:context=".Activity.PaymentActivity">
+<include layout="@layout/toolbar"  android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+
+    <android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="18dp"
+    android:background="@color/background"
+    app:cardCornerRadius="5dp"
+    card_view:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_netdollar"
+            android:layout_marginLeft="15dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@drawable/ic_check"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    app:cardCornerRadius="5dp"
+    android:elevation="9dp">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+        <customfonts.EditText_Regular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/login_phone"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            android:background="@drawable/round_border"
+            android:textSize="13dp" />
+        <customfonts.EditText_Regular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/identifiant"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            android:background="@drawable/round_border"
+            android:textSize="13dp" />
+        <customfonts.EditText_Regular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/montant"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            android:background="@drawable/round_border"
+            android:textSize="13dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/round_border">
+
+            <customfonts.EditText_Regular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:hint="Notes"
+                android:padding="15dp"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+        <customfonts.Button_Regular
+            android:id="@+id/btn_connecter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_button2"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/continuer"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+        <customfonts.Button_Regular
+            android:id="@+id/btn_annuler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/round_border"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/annuler"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+</ScrollView>
+</android.support.v7.widget.CardView>
+
+</LinearLayout>

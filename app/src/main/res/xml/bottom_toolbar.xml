@@ -1,0 +1,33 @@
+<tabs>
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/ic_home"
+        inActiveColor="#4De9e9e9"
+        activeColor="#118df0"/>
+
+    <tab
+        id="@+id/tab_creerfacture"
+        icon="@drawable/ic_facture"
+        inActiveColor="#4De9e9e9"
+        activeColor="#118df0"/>
+
+    <tab
+        id="@+id/tab_paiements"
+        icon="@drawable/ic_paiment"
+        inActiveColor="#4De9e9e9"
+        activeColor="#118df0"/>
+
+    <tab
+        id="@+id/tab_transferts"
+        icon="@drawable/ic_tranfer"
+        inActiveColor="#4De9e9e9"
+        activeColor="#118df0"/>
+
+    <tab
+        id="@+id/tab_setting"
+        icon="@drawable/ic_setting"
+        inActiveColor="#4De9e9e9"
+        activeColor="#118df0"/>
+
+
+</tabs>

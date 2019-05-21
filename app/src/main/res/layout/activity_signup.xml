@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.SignupActivity"
+    android:background="@color/background">
+    <include layout="@layout/toolbar"  android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="5dp"
+        android:elevation="9dp"
+        android:layout_marginTop="10dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="15dp">
+            <customfonts.EditText_Regular
+                android:id="@+id/txtidpassport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="ID Passport"
+                android:layout_margin="5dp"
+                android:padding="15dp"
+                android:background="@drawable/round_border"
+                android:textSize="13dp" />
+            <customfonts.EditText_Regular
+                android:id="@+id/txtname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Nom"
+                android:layout_margin="5dp"
+                android:padding="15dp"
+                android:background="@drawable/round_border"
+                android:textSize="13dp" />
+            <customfonts.EditText_Regular
+                android:id="@+id/txtsurname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Prenom"
+                android:layout_margin="5dp"
+                android:padding="15dp"
+                android:background="@drawable/round_border"
+                android:textSize="13dp" />
+            <customfonts.EditText_Regular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/login_phone"
+                android:layout_margin="5dp"
+                android:padding="15dp"
+                android:background="@drawable/round_border"
+                android:textSize="13dp" />
+            <customfonts.EditText_Regular
+                android:id="@+id/txtemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Email"
+                android:layout_margin="5dp"
+                android:padding="15dp"
+                android:background="@drawable/round_border"
+                android:textSize="13dp" />
+            <customfonts.EditText_Regular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Mot de passe"
+                android:layout_margin="5dp"
+                android:padding="15dp"
+                android:background="@drawable/round_border"
+                android:textSize="13dp" />
+            <customfonts.EditText_Regular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Confirmer"
+                android:layout_margin="5dp"
+                android:padding="15dp"
+                android:background="@drawable/round_border"
+                android:textSize="13dp" />
+
+            <customfonts.Button_Regular
+                android:id="@+id/btn_creer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rounded_button2"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="Creer compte"
+                android:textAllCaps="false"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
