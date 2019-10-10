@@ -17,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.wallet.netdollar.R;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawer;
     public NavigationView nvDrawer;
     ViewPager viewPager;
+    TextView txtnumutil;
     private ActionBarDrawerToggle drawerToggle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,16 +44,18 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(PagerAdapter);
         TabLayout tabLayout= findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
-
+       // txtnumutil=findViewById(R.id.tvnum);
         mDrawer = findViewById(R.id.drawer_layout);
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_home1);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_invoice);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_invoice);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_homer1);
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_payment);
         drawerToggle = setupDrawerToggle();
         nvDrawer =  findViewById(R.id.nvView);
         setupDrawerContent(nvDrawer);
         // Tie DrawerLayout events to the ActionBarToggle
         mDrawer.addDrawerListener(drawerToggle);
+        String num=getIntent().getStringExtra("mphone");
+        //txtnumutil.setText(num);
         SharedPreferences sharedUser = getApplicationContext().getSharedPreferences("user", Context.MODE_PRIVATE);
         closeSession();
     }
@@ -97,6 +101,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent=new Intent(MainActivity.this,ScannerActivity.class) ;
                 startActivity(intent);
                 return  true;
+            case  R.id.action_position:
+                Intent inten=new Intent(MainActivity.this,LocationActivity.class) ;
+                startActivity(inten);
+                return  true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -107,15 +115,20 @@ public class MainActivity extends AppCompatActivity {
         Class fragmentClass = null;
 
         switch(menuItem.getItemId()) {
-            case R.id.navtransfer:
-                viewPager.setCurrentItem(1);
-            break;
-            case R.id.navfacture:
+            case R.id.navtransact:
                 viewPager.setCurrentItem(0);
+                break;
+            case R.id.navtransfer:
+                Intent intenf=new Intent(MainActivity.this,PaymentActivity.class) ;
+                startActivity(intenf);
                 break;
             case R.id.navpaiement:
                 Intent inten=new Intent(MainActivity.this,PaymentActivity.class) ;
                 startActivity(inten);
+                break;
+            case R.id.nav_accountId:
+                Intent intenac=new Intent(MainActivity.this, AccountActivity.class) ;
+                startActivity(intenac);
                 break;
             case R.id.navdeconnexion:
                 SharedPrefs.saveShared(MainActivity.this,"login","true");

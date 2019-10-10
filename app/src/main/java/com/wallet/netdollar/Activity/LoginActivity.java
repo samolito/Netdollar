@@ -1,7 +1,9 @@
 package com.wallet.netdollar.Activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -10,13 +12,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.wallet.netdollar.Api.RetrofitClient;
 import com.wallet.netdollar.R;
-import com.wallet.netdollar.models.LoginResponse;
+import com.wallet.netdollar.models.AESHelper;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import org.spongycastle.util.encoders.Base64;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -25,6 +24,9 @@ public class LoginActivity extends AppCompatActivity {
     private EditText edtphone;
     private EditText edtpassword;
     ProgressDialog prgDialog;
+    private  String phone="";
+    private String walletid="";
+    AESHelper aes=new AESHelper();
 private Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +48,8 @@ private Button btn;
         btn_connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String phone=edtphone.getText().toString();
-                String walletid=edtpassword.getText().toString();
+                phone=edtphone.getText().toString();
+                walletid=edtpassword.getText().toString();
                if(phone.isEmpty())
                {
                    edtphone.setError("Phone is required");
@@ -66,42 +68,71 @@ private Button btn;
                     edtpassword.requestFocus();
                     return;
                 }
-                prgDialog.show();
-                Call<LoginResponse> call= RetrofitClient.getInstance().getApi().logger(phone,walletid);
-                call.enqueue(new Callback<LoginResponse>() {
+               // prgDialog.show();
+                verifyID();
 
-                    @Override
-                    public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                        LoginResponse loginres=response.body();
-                        String respons=new String(loginres.getStatus());
-                        //prgDialog.hide();
-                        if(respons.equals("success"))
-                        {
-                            SharedPrefs.saveShared(LoginActivity.this,"login","false");
-                           // SharedPreferences sharedUser=getApplicationContext().getSharedPreferences("user", Context.MODE_PRIVATE);
-                           // Toast.makeText(LoginActivity.this,respons,Toast.LENGTH_LONG).show();
-                            Intent intent=new Intent(LoginActivity.this,MainActivity.class) ;
-                            startActivity(intent);
-                            finish();
-
-                        }
-                        else
-                        {
-                            prgDialog.hide();
-                            Toast.makeText(LoginActivity.this,respons,Toast.LENGTH_LONG).show();
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<LoginResponse> call, Throwable t) {
-
-                    }
-                });
+//                Call<LoginResponse> call= RetrofitClient.getInstance().getApi().logger(phone,walletid);
+//                call.enqueue(new Callback<LoginResponse>() {
+//
+//                    @Override
+//                    public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+//                        LoginResponse loginres=response.body();
+//                        String respons=new String(loginres.getStatus());
+//                        //prgDialog.hide();
+//                        if(respons.equals("success"))
+//                        {
+//                            //if()
+//                            SharedPrefs.saveShared(LoginActivity.this,"login","false");
+//                            SharedPreferences sharedUser=getApplicationContext().getSharedPreferences("user", Context.MODE_PRIVATE);
+//                           // Toast.makeText(LoginActivity.this,respons,Toast.LENGTH_LONG).show();
+//                            Intent intent=new Intent(LoginActivity.this,MainActivity.class) ;
+//                            startActivity(intent);
+//                            finish();
+//
+//                        }
+//                        else
+//                        {
+//                            prgDialog.hide();
+//                            Toast.makeText(LoginActivity.this,respons,Toast.LENGTH_LONG).show();
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<LoginResponse> call, Throwable t) {
+//
+//                    }
+//                });
 
             }
         });
     }
+    public   void verifyID() {
+        byte[]salt=null;
+        String passwgiven="";
+        SharedPreferences sharePefs = getApplicationContext().getSharedPreferences("signup", Context.MODE_PRIVATE);
+        String username = SharedPrefs.readShared(this,"username", "");
+        String password = SharedPrefs.readShared(this,"password", "");
+        String saltS =  SharedPrefs.readShared(this,"salt", "");
+        salt= Base64.decode(saltS);
+        passwgiven=aes.hashPassword(walletid,salt);
+        prgDialog.show();
+        if(password.equals(passwgiven))
+        {
+            Toast.makeText(getApplicationContext(), "Succes login", Toast.LENGTH_LONG).show();
 
+            SharedPrefs.saveShared(LoginActivity.this,"login","false");
+            SharedPreferences sharedUser=getApplicationContext().getSharedPreferences("user", Context.MODE_PRIVATE);
+            Intent intentlog=new Intent(LoginActivity.this,MainActivity.class) ;
+            startActivity(intentlog);
+            finish();
+        }
+
+        else {
+            prgDialog.hide();
+            Toast.makeText(getApplicationContext(), "Password Incorrect", Toast.LENGTH_LONG).show();
+
+        }
+      }
     public void newcompte()
     {
         txtnewcompte.setOnClickListener(new View.OnClickListener() {
@@ -109,6 +140,7 @@ private Button btn;
             public void onClick(View v) {
                 Intent intent=new Intent(LoginActivity.this, SignupActivity.class) ;
                 startActivity(intent);
+                finish();
             }
         });
     }

@@ -7,25 +7,31 @@
     android:orientation="vertical"
     tools:context=".Activity.ScannerActivity">
     <include layout="@layout/toolbar"  android:layout_width="match_parent" android:layout_height="wrap_content"/>
-<RelativeLayout
+    <TextView
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtqrcode"/>
+    <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="30dp">
-    <SurfaceView
-        android:id="@+id/surfaceView"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginTop="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true" />
+    android:layout_margin="20dp">
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp" />
 </RelativeLayout>
 
         <customfonts.Button_Regular
             android:id="@+id/btn_scanfrom"
             android:layout_width="250dp"
             android:layout_height="40dp"
-            android:layout_marginTop="20dp"
             android:background="@drawable/rounded_button2"
             android:layout_gravity="center"
             android:text="Gallerie"

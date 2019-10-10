@@ -4,13 +4,17 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -19,6 +23,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Activity.AccountActivity"></activity>
+        <activity android:name=".Activity.LocationActivity" />
+        <activity
+            android:name=".Activity.ConfirmcodeActivity"
+            android:label="@string/titre_verifier" />
         <activity android:name=".Activity.Splash_screenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,22 +35,42 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.SignupActivity"
-            android:label="@string/titre_newcompte"/>
-
-        <activity android:name=".Activity.ScannerActivity"/>
+        <activity
+            android:name=".Activity.SignupActivity"
+            android:label="@string/titre_newcompte" />
+        <activity android:name=".Activity.ScannerActivity" />
         <activity
             android:name=".Activity.PaymentActivity"
-            android:label="@string/payments_method"/>
-        <activity android:name=".Activity.LoginActivity"></activity>
+            android:label="@string/payments_method" />
+        <activity android:name=".Activity.LoginActivity" />
         <activity
             android:name=".Activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/MyTheme.Detail" />
 
+        <uses-library
+            android:name="com.google.android.maps"
+            android:required="true" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/map_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="barcode" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/path_providers" />
+        </provider>
     </application>
 
 </manifest>

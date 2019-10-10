@@ -10,12 +10,13 @@ import android.widget.TextView;
 import com.wallet.netdollar.R;
 import com.wallet.netdollar.Transactions.Transactions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.TransactionsViewHolder> {
 
     private Context ctx;
-    private List<Transactions>transactionslist;
+    private List<Transactions>transactionslist=new ArrayList<>();
 
     public TransactionAdapter(Context ctx, List<Transactions> transactionslist) {
         this.ctx = ctx;

@@ -56,16 +56,19 @@ tools:context=".Activity.PaymentActivity">
         android:orientation="vertical"
         android:layout_margin="15dp">
 
-        <customfonts.EditText_Regular
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="@string/login_phone"
             android:layout_margin="10dp"
-            android:padding="15dp"
-            android:background="@drawable/round_border"
-            android:textSize="13dp" />
-        <customfonts.EditText_Regular
+            app:ms_background_selector="@drawable/round_border"
+            android:hint="@string/spinner_text"/>
+        <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edtAccountId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -74,7 +77,17 @@ tools:context=".Activity.PaymentActivity">
             android:padding="15dp"
             android:background="@drawable/round_border"
             android:textSize="13dp" />
+    <ImageButton
+        android:id="@+id/imgbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_qrcodee"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"/>
+
+</RelativeLayout>
         <customfonts.EditText_Regular
+            android:id="@+id/edtmontant"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -90,6 +103,7 @@ tools:context=".Activity.PaymentActivity">
             android:background="@drawable/round_border">
 
             <customfonts.EditText_Regular
+                android:id="@+id/edtnote"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#00000000"
@@ -99,7 +113,7 @@ tools:context=".Activity.PaymentActivity">
 
         </LinearLayout>
         <customfonts.Button_Regular
-            android:id="@+id/btn_connecter"
+            android:id="@+id/btn_confirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

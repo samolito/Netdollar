@@ -65,7 +65,7 @@
                         android:id="@+id/edtphone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="number"
+                        android:inputType="phone"
                         android:hint="@string/login_phone"
                         android:layout_margin="10dp"
                         android:padding="15dp"

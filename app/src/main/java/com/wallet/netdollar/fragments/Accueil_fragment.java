@@ -3,7 +3,6 @@ package com.wallet.netdollar.fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,11 +46,10 @@ public class Accueil_fragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView = view.findViewById(R.id.rltransaction);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        final int i = 0;
-       // Call<Transactions> call = RetrofitTrans.getInstance().getApi().getTransations();
-       /* Call <TransactionsResponse> call= RetrofitTrans.getInstance().getApi().getTransations();
+
+
+       // Call<Transactions> call = RetrofitTrans.getInstance().getApi().transactions();
+       /* Call <TransactionsResponse> call= RetrofitTrans.getInstance().getApi().transactions();
         call.enqueue(new Callback<TransactionsResponse>() {
             @Override
             public void onResponse(Call<TransactionsResponse> call, Response<TransactionsResponse> response) {

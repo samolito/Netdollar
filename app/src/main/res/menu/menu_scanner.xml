@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_position"
+        android:icon="@drawable/ic_map"
+        android:title="Show Merchant"
+        android:orderInCategory="5"
+        app:showAsAction="always|collapseActionView">
+    </item>
     <item
         android:id="@+id/action_scan"
         android:icon="@drawable/ic_qrcode"
@@ -8,4 +16,5 @@
         android:orderInCategory="5"
         app:showAsAction="always|collapseActionView">
      </item>
+
 </menu>

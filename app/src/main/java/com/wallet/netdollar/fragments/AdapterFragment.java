@@ -39,9 +39,9 @@ public class AdapterFragment extends FragmentPagerAdapter {
         //return tabTitles[position];
         switch (position) {
             case 0:
-                return "ACCUEIL";
+                return "TRANSACTIONS";
             case 1:
-                return "FACTURE";
+                return "TRANSFERT";
             case 2:
                 return "PAYEZ";
         }

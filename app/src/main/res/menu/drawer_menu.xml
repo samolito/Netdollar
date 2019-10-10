@@ -2,48 +2,40 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <group android:checkableBehavior="single"
     android:visible="true">
-    <item android:title="Transactions">
-        <menu>
-        <group android:checkableBehavior="single">
+
     <item
-        android:id="@+id/navfacture"
-        android:icon="@drawable/ic_facture"
-        android:title="Facture" />
+        android:id="@+id/navtransact"
+        android:icon="@drawable/ic_invoice"
+        android:title="@string/nav_transact" />
 
     <item
         android:id="@+id/navtransfer"
-        android:icon="@drawable/ic_tranfer"
-        android:title="Transfert" />
+        android:icon="@drawable/ic_homer1"
+        android:title="@string/nav_transfert" />
     <item
         android:id="@+id/navpaiement"
         android:icon="@drawable/ic_paiment"
-        android:title="Paiement" />
+        android:title="@string/nav_paiement" />
         </group>
-        </menu>
-    </item>
-</group>
+
+
     <group
         android:id="@+id/groupsimpleuser"
         android:checkableBehavior="single"
         android:visible="true">
-        <item android:title="Compte">
-            <menu>
-            <group android:checkableBehavior="single">
         <item
-            android:id="@+id/navprofil"
+            android:id="@+id/nav_accountId"
             android:icon="@drawable/ic_profil"
-            android:title="Profil" />
+            android:title="@string/nav_account" />
         <item
         android:id="@+id/navsettign"
         android:icon="@drawable/ic_setting"
-        android:title="Parametre" />
+        android:title="@string/nav_parametre" />
 
         <item
             android:id="@+id/navdeconnexion"
             android:icon="@drawable/ic_deconnect"
-            android:title="Deconnecter" />
-            </group>
-            </menu>
-            </item>
+            android:title="@string/nav_logout" />
+
 </group>
 </menu>
