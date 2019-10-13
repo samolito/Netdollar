@@ -23,4 +23,6 @@
     <string name="titre_scan">Scanner ID</string>
     <string name="titre_verifier">Vérification</string>
     <string name="txtVerifier">Confirmer votre code</string>
+    <string name="confirm">Confirmer</string>
+    <string name="create_account">Creer compte</string>
 </resources>

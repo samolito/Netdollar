@@ -76,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="Mot de passe"
+                android:hint="@string/login_password"
                 android:layout_margin="5dp"
                 android:padding="15dp"
                 android:background="@drawable/round_border"
@@ -86,7 +86,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="Confirmer"
+                android:hint="@string/confirm"
                 android:layout_margin="5dp"
                 android:padding="15dp"
                 android:background="@drawable/round_border"
@@ -101,7 +101,7 @@
                 android:background="@drawable/rounded_button2"
                 android:gravity="center"
                 android:padding="15dp"
-                android:text="Creer compte"
+                android:text="@string/create_account"
                 android:textAllCaps="false"
                 android:textColor="#ffffff" />
 

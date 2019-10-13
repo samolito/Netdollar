@@ -25,4 +25,6 @@
     <string name="nav_transfert">Transfer</string>
     <string name="new_account">Create a new account</string>
     <string name="txtVerifier">Confirm your code</string>
+    <string name="confirm">Confirm</string>
+    <string name="create_account">Create Account</string>
 </resources>
