@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="map_key">AIzaSyAu2uIBtOWl6jqnUTLkXF7I87WcQEOzwQk</string>
+<string name="map_key" translatable="false">AIzaSyAu2uIBtOWl6jqnUTLkXF7I87WcQEOzwQk</string>
 </resources>

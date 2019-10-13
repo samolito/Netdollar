@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Netdollar</string>
+    <string name="annuler">Annuler</string>
+    <string name="connect">Connecter</string>
+    <string name="continuer">Continuer</string>
+    <string name="forget_password">Mot de passe oublier</string>
+    <string name="identifiant">Identifiant</string>
+    <string name="login_password">Mot de passe</string>
+    <string name="login_phone">Telephone (+1) 000-000-0000</string>
+    <string name="montant">Montant</string>
+    <string name="nav_account">Mon Compte</string>
+    <string name="nav_logout">Deconnexion</string>
+    <string name="nav_paiement">Paiement</string>
+    <string name="nav_parametre">Parametre</string>
+    <string name="nav_transact">Transaction</string>
+    <string name="nav_transfert">Transfert</string>
+    <string name="new_account">Creer un nouveau compte</string>
+    <string name="payments_method">Transaction</string>
+    <string name="spinner_text">Type transaction</string>
+    <string name="titre_map">Location</string>
+    <string name="titre_newcompte">Nouveau Compte</string>
+    <string name="titre_scan">Scanner ID</string>
+    <string name="titre_verifier">Vérification</string>
+    <string name="txtVerifier">Confirmer votre code</string>
+</resources>
