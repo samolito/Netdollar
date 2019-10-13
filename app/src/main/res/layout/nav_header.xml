@@ -25,7 +25,7 @@
         android:id="@+id/txtnomutil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Utilisateur Anonyme"
+        android:text="@string/anonymous"
         android:textColor="@color/background"
         android:layout_marginLeft="10dp"
         android:textSize="15dp"

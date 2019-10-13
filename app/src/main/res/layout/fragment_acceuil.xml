@@ -22,7 +22,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Solde actuel"
+                android:text="@string/curr_balance"
                 android:textColor="@color/background"
                 android:textSize="15dp"
                 android:layout_marginTop="10dp"
@@ -58,7 +58,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Ajouter de fonds"
+                android:text="@string/add_funds"
                 android:textColor="@color/background"
                 android:textSize="15dp"
                 android:layout_marginBottom="10dp"
@@ -84,7 +84,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Activites recentes"
+            android:text="@string/activites_recentes"
             android:textColor="@color/colorAccent"
             android:textSize="15dp"
             android:textStyle="bold"/>
@@ -113,7 +113,7 @@
                 android:layout_centerInParent="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Montant"
+                android:text="@string/amount"
                 android:textColor="@color/colorAccent"
                 android:textSize="15sp"
                 android:textStyle="bold"/>

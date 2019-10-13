@@ -25,4 +25,10 @@
     <string name="txtVerifier">Confirmer votre code</string>
     <string name="confirm">Confirmer</string>
     <string name="create_account">Creer compte</string>
+    <string name="gallerie">Gallerie</string>
+    <string name="curr_balance">Solde actuel</string>
+    <string name="add_funds">Ajouter de fonds</string>
+    <string name="activites_recentes">Activites recentes</string>
+    <string name="amount">Montant</string>
+    <string name="anonymous">Utilisateur Anonyme</string>
 </resources>
