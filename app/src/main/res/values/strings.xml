@@ -1,28 +1,36 @@
 <resources>
     <string name="app_name">Netdollar</string>
-    <string name="drawer_open">Open navigation drawer</string>
-    <string name="drawer_close">Close navigation drawer</string>
+    <string name="drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="drawer_close" translatable="false">Close navigation drawer</string>
     <string name="payments_method">Transaction</string>
-    <string name="connect">Connecter</string>
-    <string name="continuer">Continuer</string>
-    <string name="annuler">Annuler</string>
-    <string name="new_account">Creer un nouveau compte</string>
-    <string name="forget_password">Mot de passe oublier</string>
-    <string name="login_phone">Telephone (+1)000-000-0000</string>
-    <string name="login_password">Mot de passe</string>
-    <string name="net_dollar">Netdollar</string>
-    <string name="identifiant">Identifiant</string>
-    <string name="nav_paiement">Paiement</string>
-    <string name="nav_transfert">Transfert</string>
+    <string name="connect">Connect</string>
+    <string name="continuer">Continue</string>
+    <string name="annuler">Cancel</string>
+    <string name="login_phone">Telephone (+1) 000-000-0000</string>
+    <string name="login_password">Password</string>
+    <string name="net_dollar" translatable="false">Netdollar</string>
+    <string name="identifiant">Login</string>
     <string name="nav_transact">Transaction</string>
-    <string name="nav_parametre">Parametre</string>
-    <string name="nav_account">Mon Compte</string>
-    <string name="nav_logout">Deconnexion</string>
-    <string name="montant">Montant</string>
-    <string name="titre_newcompte">Nouveau Compte</string>
+    <string name="nav_account">My Account</string>
+    <string name="montant">Amount</string>
+    <string name="titre_newcompte">New Account</string>
     <string name="titre_verifier">Verification</string>
     <string name="titre_scan">Scanner ID</string>
     <string name="titre_map">Location</string>
-    <string name="txtVerifier">Confirmer votre code</string>
     <string name="spinner_text">Type transaction</string>
+    <string name="forget_password">Forgot password</string>
+    <string name="nav_logout">Log out</string>
+    <string name="nav_paiement">Payment</string>
+    <string name="nav_parametre">Parameter</string>
+    <string name="nav_transfert">Transfer</string>
+    <string name="new_account">Create a new account</string>
+    <string name="txtVerifier">Confirm your code</string>
+    <string name="confirm">Confirm</string>
+    <string name="create_account">Create Account</string>
+    <string name="gallerie">Gallery</string>
+    <string name="curr_balance">Current Balance</string>
+    <string name="add_funds">Add funds</string>
+    <string name="activites_recentes">Recent Activities</string>
+    <string name="amount">Amount</string>
+    <string name="anonymous">Anonymous User</string>
 </resources>

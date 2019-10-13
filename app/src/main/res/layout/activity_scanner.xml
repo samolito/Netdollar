@@ -34,7 +34,7 @@
             android:layout_height="40dp"
             android:background="@drawable/rounded_button2"
             android:layout_gravity="center"
-            android:text="Gallerie"
+            android:text="@string/gallerie"
             android:layout_alignParentEnd="true"
             android:textColor="#ffffff" />
 
